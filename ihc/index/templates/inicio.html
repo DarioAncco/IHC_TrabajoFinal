@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Inicio</h1>
+	{% if user.is_authenticated %}
+	<a href="users/logout">Logout</a>
+	{% else %}
+	<a href="users/login">Login</a>
+	{% endif %}
+</body>
