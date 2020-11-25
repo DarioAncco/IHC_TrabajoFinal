@@ -6,7 +6,7 @@ from django.contrib import messages
 def login(request):
 	if request.method == "POST":
 		username = request.POST["username"]
-		password = request.POST["password1"]
+		password = request.POST["password"]
 
 		user = auth.authenticate(username=username,password=password)
 
