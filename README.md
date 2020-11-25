@@ -1,6 +1,7 @@
 # IHC_TrabajoFinal
 
 Alumnos:
+
 Alexis Dario Ancco Ruelas - 20172142 - LAB B
 
 Apaza Calsin Michael Secarlos - 20180564 - LAB C
