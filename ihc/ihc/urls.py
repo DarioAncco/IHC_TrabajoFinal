@@ -18,6 +18,10 @@ from django.urls import path, include
 from index.views import inicio
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+#Para la carpeta 'media'
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio,name='inicio'),
@@ -25,3 +29,6 @@ urlpatterns = [
 ]
 
 urlpatterns += staticfiles_urlpatterns()
+
+#Para la carpeta 'media'
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
