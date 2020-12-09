@@ -20,6 +20,12 @@ from django.conf.urls.i18n import i18n_patterns
 from index.views import inicio
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+<<<<<<< HEAD
+#Para la carpeta 'media'
+from django.conf import settings
+from django.conf.urls.static import static
+=======
+>>>>>>> master
 
 urlpatterns = [
     #url(r'^i18n/',include('django.conf.urls.i18n')),
@@ -29,4 +35,11 @@ urlpatterns = [
     path('users/',include('users.urls')),
 ]
 
+<<<<<<< HEAD
 urlpatterns += staticfiles_urlpatterns()
+
+#Para la carpeta 'media'
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+urlpatterns += staticfiles_urlpatterns()
+>>>>>>> master
