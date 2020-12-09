@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django.conf.locale
+from django.conf import global_settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -65,6 +68,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.i18n',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -118,11 +122,52 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES=[
+    ('es','Spanish'),
+    ('en','English'),
+    ('pt-br','Portuguese'),
+]
+
+EXTRA_LANG_INFO={
+    'es':{
+        'bidi':False,
+        'code':'es',
+        'name':'Spanish',
+        'name_local':'Spanish',
+    },
+
+    'en':{
+        'bidi':False,
+        'code':'en',
+        'name':'English',
+        'name_local':'English',
+    },
+
+    'pt-br':{
+        'bidi':False,
+        'code':'pt-br',
+        'name':'Portuguese',
+        'name_local':'Portuguese',
+    },
+}
+
+LANG_INFO=dict(EXTRA_LANG_INFO.items())
+
+django.conf.locale.LANG_INFO=LANG_INFO
+global_settings.LANGUAGES = global_settings.LANGUAGES+[("es_PE","Spanish"),("en:US","English"),("pt_BR","Portuguese")]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+PACKAGE_ROOT=os.path.abspath(os.path.dirname(__file__))
+LOCALE_PATHS=(
+    os.path.join(BASE_DIR,'locale'),
+)
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
+DEFAULT_CHARSET = "utf-8"
+>>>>>>> master
