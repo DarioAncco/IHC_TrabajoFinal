@@ -33,6 +33,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio,name='inicio'),
     path('users/',include('users.urls')),
+    path('articulos/',include('articulos.urls')),
+    path('categorias/',include('categorias.urls')),
 ]
 
 <<<<<<< HEAD
