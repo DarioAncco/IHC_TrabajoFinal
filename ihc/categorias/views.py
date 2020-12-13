@@ -19,3 +19,6 @@ def registroCategoria(request):
         return redirect("/")
     else:
         return render(request,"categoriasForm.html")
+
+def mostrarCategoria(request):
+    return render(request,"categoriasMostrar.html")

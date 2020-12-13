@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-06 08:48-0500\n"
+"POT-Creation-Date: 2020-12-12 18:48-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,57 +18,97 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: index/templates/inicio.html:12 index/templates/inicio.html:64
-#: index/templates/inicio.html:171
+#: index/templates/inicio.html:168
 msgid "Inicio"
 msgstr "Start"
 
-#: index/templates/inicio.html:65 index/templates/inicio.html:172
+#: index/templates/inicio.html:65 index/templates/inicio.html:169
 msgid "Ofertas"
 msgstr "Offers"
 
-#: index/templates/inicio.html:66 index/templates/inicio.html:173
+#: index/templates/inicio.html:66 index/templates/inicio.html:170
 msgid "Auxiliar"
-msgstr ""
+msgstr "Assistant"
 
-#: index/templates/inicio.html:75 index/templates/inicio.html:182
+#: index/templates/inicio.html:75 index/templates/inicio.html:179
 msgid "Contactos"
 msgstr "Contacts"
 
-#: index/templates/inicio.html:90 index/templates/inicio.html:110
+#: index/templates/inicio.html:79 index/templates/inicio.html:123
+msgid "Gráficos de sitio"
+msgstr "Site Graphics"
+
+#: index/templates/inicio.html:82 index/templates/inicio.html:124
+msgid "Nueva"
+msgstr "New"
+
+#: index/templates/inicio.html:82 index/templates/inicio.html:124
+msgid "Categoría"
+msgstr "Category"
+
+#: index/templates/inicio.html:83 index/templates/inicio.html:125
+msgid "Nuevo"
+msgstr "New"
+
+#: index/templates/inicio.html:83 index/templates/inicio.html:125
+msgid "Producto"
+msgstr "Product"
+
+#: index/templates/inicio.html:91 index/templates/inicio.html:111
 msgid "Bienvenido"
 msgstr "Welcome"
 
-#: index/templates/inicio.html:184
+#: index/templates/inicio.html:181
 msgid "Registrarse"
 msgstr "Register"
 
-#: index/templates/inicio.html:215
+#: index/templates/inicio.html:212
 msgid "Departamentos"
 msgstr "Departments"
 
-#: index/templates/inicio.html:218
+#: index/templates/inicio.html:215
 msgid "Productos"
 msgstr "Products"
 
-#: index/templates/inicio.html:227
+#: index/templates/inicio.html:224
 msgid "Categorías"
 msgstr "Categories"
 
-#: index/templates/inicio.html:230
+#: index/templates/inicio.html:227
 msgid "¿Qué esta buscando?"
 msgstr "What are you looking at?"
 
-#: index/templates/inicio.html:231
+#: index/templates/inicio.html:228
 msgid "Buscar"
 msgstr "Search"
 
-#: index/templates/inicio.html:255 index/templates/inicio.html:260
+#: index/templates/inicio.html:252 index/templates/inicio.html:257
 msgid "Secciones"
 msgstr "Sections"
 
-#: index/templates/inicio.html:259
+#: index/templates/inicio.html:256
 msgid "Todos"
 msgstr "All"
+
+#, fuzzy
+#~| msgid "Registrarse"
+#~ msgid "Registrar"
+#~ msgstr "Register"
+
+#, fuzzy
+#~| msgid "Registrarse"
+#~ msgid "Artículo"
+#~ msgstr "Product"
+
+#, fuzzy
+#~| msgid "Registrarse"
+#~ msgid "Registrar Categoría"
+#~ msgstr "Register Category"
+
+#, fuzzy
+#~| msgid "Registrarse"
+#~ msgid "Registrar Artículo"
+#~ msgstr "Register Product"
 
 #~ msgid "Idioma"
 #~ msgstr "Language"

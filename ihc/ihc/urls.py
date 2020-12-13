@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 from django.conf.urls.i18n import i18n_patterns
-from index.views import inicio
+from index.views import inicio, graficos
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 #Para la carpeta 'media'
@@ -29,6 +29,7 @@ urlpatterns = [
     path('i18n/',include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('', inicio,name='inicio'),
+    path('graficos/', graficos,name='graficos'),
     path('users/',include('users.urls')),
     path('articulos/',include('articulos.urls')),
     path('categorias/',include('categorias.urls')),
