@@ -34,3 +34,12 @@ def actualizarCategoria(request , id):
         categoria.save()
         return redirect("/categorias/mostrarCategoria")
     return render(request , "categoriasUpdate.html" , context={"categoria":categoria})
+
+def eliminarCategoria(request , id):
+    eliminado = Categoria.objects.get(pk=id)
+    if eliminado != None:
+        eliminado.delete()
+    return redirect("/categorias/mostrarCategoria");
+
+def categoriaHome(request):
+    return render(request , "categorias.html")
