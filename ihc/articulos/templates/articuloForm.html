@@ -36,10 +36,18 @@
             	{% csrf_token %}
                 <div class="row">
                     <div class="col-lg-12">
-                    	<input type="number" placeholder="Codigo del articulo" name="art_cod">
+                    	<input type="text" placeholder="Codigo del articulo" name="art_cod">
                     	<input type="text" placeholder="Nombre del articulo" name="art_nom">
-                    	<input type="text" placeholder="Descripcion del articulo" name="art_des">
-                    	<input type="text" placeholder="Categoria" name="art_cat_cod">
+                        <input type="text" placeholder="Descripcion del articulo" name="art_des">
+                        <label>Categoria: </label>
+                        <br>
+                        <select name="art_cat_cod" value="">
+                            {% for categoria in categorias %}
+                                <option value="{{categoria.CatCod}}">{{categoria.CatDes}}</option>
+                            {% endfor %}
+                        </select>
+                        <br>
+                        <br>
                     	<input type="text" placeholder="Costo(unitario)" name="art_cos_uni">
                         <input style="width: 80px;"type="checkbox" placeholder="Disponible" name="art_sit_act">
                         <label style="font-size:16px;color: rgb(110,110,110);">Articulo Disponible</label>
