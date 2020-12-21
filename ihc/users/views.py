@@ -57,3 +57,24 @@ def registro(request):
 
 	else:
 		return render(request,"registro.html")
+
+def recover(request):
+	if request.method == "POST":
+		texto = request.POST['username']
+		if '@' in texto:
+			usuario = User.objects.filter(email = texto).first()
+		else:
+			usuario = User.objects.filter(username = texto).first()
+		if(usuario == None):
+			context = {'existe':False}
+		else:
+			context = {
+				'existe':True,
+				'usuario':usuario
+			}
+		return render(request , 'mensajeAyuda.html' , context=context)
+	return render(request , "recover.html")
+
+def mensajeConfirmacion(request):
+	return render(request , 'mensajeAyuda.html')
+

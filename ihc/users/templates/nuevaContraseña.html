@@ -29,31 +29,37 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact__form__title">
-                        <h2>Login</h2>
+                        <h2>Recuperacion</h2>
                     </div>
                 </div>
             </div>
-            <form action="login" method="post">
+            <div>
+                Recuperacion de contraseña
+            </div>
+            <hr>
+            <form action="updatePassword" method="post">
             	{% csrf_token %}
                 <div class="row">
                     <div class="col-lg-12">
-                        <input type="text" placeholder="Usuario" name="username">
-                        <input type="password" placeholder="Password" name="password">
-                    </div>{% load static %}
-                    <div style="text-align: center;">
-                        <span>¿Olvido su contraseña?, haga click <a href="recover">Aqui</a>.</span>
+                        <span>Vuelva a escribir su nombre de usuario</span>
+                        <input type="password" placeholder="Usuario" name="username">
+                        <span>Ingrese una nueva contraseña:</span>
+                        <input type="password" placeholder="Contraseña" name="password1">
+                        <input type="password" placeholder="Confirmacion contraseña" name="password2">
                     </div>
-                    <div class="col-lg-12 text-center">
-                        <button type="submit" class="site-btn">Entrar</button>
-                    </div>
-                    <br>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <a class="site-btn">Cancelar</a>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <button type="submit" class="site-btn">Recuperar</button>
                 </div>
             </form>
         </div>
     </div>
     <div>
 		{% for messages in messages %}
-		<h2>{{messages}}</h2>
+		<h2 style="color:red">{{messages}}</h2>
 		{% endfor %}
 	</div>
 </body>

@@ -67,7 +67,7 @@ def registrarCompra(request):
         )
 
         salida.save()
-        return redirect("/articulos")
+        return redirect("/articulos/listaCompra")
     else:
         articulos = Articulo.objects.all()
         presentaciones = Presentacion.objects.all()
@@ -84,3 +84,5 @@ def listaCompra(request):
     compras = Salida_Detalle.objects.all()
     return render(request , "listaCompra.html" , context={"compras":compras})
 
+def articulosCompras(request):
+    return render(request , 'articulos.html')
