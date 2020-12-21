@@ -29,24 +29,30 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact__form__title">
-                        <h2>Login</h2>
+                        <h2>Recuperacion</h2>
                     </div>
                 </div>
             </div>
-            <form action="login" method="post">
+            <div>
+                Recuperacion de contraseña
+            </div>
+            <hr>
+            <form action="recover" method="post">
             	{% csrf_token %}
                 <div class="row">
                     <div class="col-lg-12">
-                        <input type="text" placeholder="Usuario" name="username">
-                        <input type="password" placeholder="Password" name="password">
-                    </div>{% load static %}
-                    <div style="text-align: center;">
-                        <span>¿Olvido su contraseña?, haga click <a href="recover">Aqui</a>.</span>
+                        <span>Ingrese su nombre de usuario, o su direccion de correo electrónico</span>
+                        <input type="text" placeholder="Nombre de usuario o direccion de Email" name="username">
                     </div>
-                    <div class="col-lg-12 text-center">
-                        <button type="submit" class="site-btn">Entrar</button>
+                </div>
+                <div>
+                    <div class="col-lg-12 text-center" style="display: inline;">
+                        <a class="site-btn" href="/users/login">Cancelar</a>
                     </div>
-                    <br>
+                    <div class="col-lg-12 text-center" style="display: inline;">
+                        <button type="submit" class="site-btn">Recuperar</button>
+                    </div>
+
                 </div>
             </form>
         </div>

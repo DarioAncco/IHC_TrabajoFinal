@@ -40,8 +40,8 @@ class Salida_Detalle(models.Model):
 	def restarStock(self):
 		resta = 0
 
-		if self.SalDetCan < self.SalDetArtCod.ArtSto:
-			resta = self.SalDetArtCod.ArtSto - self.SalDetCan
+		if (int(self.SalDetCan) < self.SalDetArtCod.ArtSto):
+			resta = self.SalDetArtCod.ArtSto - int(self.SalDetCan)
 
 		return resta
 
